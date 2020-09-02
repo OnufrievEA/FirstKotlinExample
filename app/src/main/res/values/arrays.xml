@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="titles">
+        <item>"Первая заметка"</item>
+        <item>"Вторая заметка"</item>
+        <item>"Третья заметка"</item>
+        <item>"Четвертая заметка"</item>
+        <item>"Пятая заметка"</item>
+        <item>"Шестая заметка"</item>
+        <item>"Седьмая заметка"</item>
+    </array>
+
+    <array name="notes">
+        <item>"Текст заметки № 1"</item>
+        <item>"Текст заметки № 2"</item>
+        <item>"Текст заметки № 3"</item>
+        <item>"Текст заметки № 4"</item>
+        <item>"Текст заметки № 5"</item>
+        <item>"Текст заметки № 6"</item>
+        <item>"Текст заметки № 7"</item>
+    </array>
+
+    <integer-array name="colors">
+        <item>0xfff06292</item>
+        <item>0xff9575cd</item>
+        <item>0xff64b5f6</item>
+        <item>0xff4db6ac</item>
+        <item>0xffb2ff59</item>
+        <item>0xffffeb3b</item>
+        <item>0xffff6e40</item>
+    </integer-array>
+</resources>
