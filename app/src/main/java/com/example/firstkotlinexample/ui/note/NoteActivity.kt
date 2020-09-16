@@ -10,8 +10,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.ViewModelProvider
 import com.example.firstkotlinexample.R
-import com.example.firstkotlinexample.data.model.Color
-import com.example.firstkotlinexample.data.model.Note
+import com.example.firstkotlinexample.data.entity.Color
+import com.example.firstkotlinexample.data.entity.Note
 import kotlinx.android.synthetic.main.activity_main.toolbar
 import kotlinx.android.synthetic.main.activity_note.*
 import java.text.SimpleDateFormat

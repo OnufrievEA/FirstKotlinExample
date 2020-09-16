@@ -6,8 +6,8 @@ import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.example.firstkotlinexample.R
-import com.example.firstkotlinexample.data.model.Color
-import com.example.firstkotlinexample.data.model.Note
+import com.example.firstkotlinexample.data.entity.Color
+import com.example.firstkotlinexample.data.entity.Note
 import kotlinx.android.synthetic.main.item_note.view.*
 
 class MainAdapter(private val onItemClickListener: OnItemClickListener) :
@@ -17,7 +17,7 @@ class MainAdapter(private val onItemClickListener: OnItemClickListener) :
         fun onItemClick(note: Note)
     }
 
-    var noteList: List<Note> = listOf()
+    var notes: List<Note> = listOf()
         set(value) {
             field = value
             notifyDataSetChanged()
@@ -49,9 +49,9 @@ class MainAdapter(private val onItemClickListener: OnItemClickListener) :
         return NoteViewHolder(view)
     }
 
-    override fun getItemCount() = noteList.size
+    override fun getItemCount() = notes.size
 
     override fun onBindViewHolder(holder: NoteViewHolder, position: Int) =
-        holder.bind(noteList[position])
+        holder.bind(notes[position])
 }
 

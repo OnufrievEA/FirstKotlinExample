@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.firstkotlinexample.R
-import com.example.firstkotlinexample.data.model.Note
+import com.example.firstkotlinexample.data.entity.Note
 import com.example.firstkotlinexample.ui.note.NoteActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
         mainRecycler.adapter = adapter
 
         mainViewModel.viewState().observe(this, Observer<MainViewState> { t ->
-            t?.let { adapter.noteList = it.notes }
+            t?.let { adapter.notes = it.notes }
         })
 
         fab.setOnClickListener {

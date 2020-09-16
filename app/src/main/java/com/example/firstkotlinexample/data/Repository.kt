@@ -3,8 +3,8 @@ package com.example.firstkotlinexample.data
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.example.firstkotlinexample.R
-import com.example.firstkotlinexample.data.model.Color
-import com.example.firstkotlinexample.data.model.Note
+import com.example.firstkotlinexample.data.entity.Color
+import com.example.firstkotlinexample.data.entity.Note
 import com.example.firstkotlinexample.ui.main.App
 import java.util.*
 
