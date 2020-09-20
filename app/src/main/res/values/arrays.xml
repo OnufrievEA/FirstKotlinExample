@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="titles">
+        <item>"Первая заметка"</item>
+        <item>"Вторая заметка"</item>
+        <item>"Третья заметка"</item>
+        <item>"Четвертая заметка"</item>
+        <item>"Пятая заметка"</item>
+        <item>"Шестая заметка"</item>
+        <item>"Седьмая заметка"</item>
+    </array>
+
+    <array name="notes">
+        <item>"Текст заметки № 1"</item>
+        <item>"Текст заметки № 2"</item>
+        <item>"Текст заметки № 3"</item>
+        <item>"Текст заметки № 4"</item>
+        <item>"Текст заметки № 5"</item>
+        <item>"Текст заметки № 6"</item>
+        <item>"Текст заметки № 7"</item>
+    </array>
+
+</resources>
