@@ -18,8 +18,8 @@ abstract class BaseActivity<T, S : BaseViewState<T>> : AppCompatActivity() {
         setSupportActionBar(toolbar)
         viewModel.getViewState().observe(this, Observer { state ->
             state ?: return@Observer
-            state.error?.let { e ->
-                renderError(e)
+            state.error?.let {
+                renderError(it)
                 return@Observer
             }
             renderData(state.data)
@@ -29,12 +29,12 @@ abstract class BaseActivity<T, S : BaseViewState<T>> : AppCompatActivity() {
     abstract fun renderData(data: T)
 
     protected fun renderError(error: Throwable?) {
-        error?.message?.let { message ->
-            showError(message)
+        error?.message?.let {
+            showError(it)
         }
     }
 
-    protected fun showError(message: String) {
+    private fun showError(message: String) {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
     }
 

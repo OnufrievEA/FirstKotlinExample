@@ -1,4 +1,4 @@
-package ru.geekbrains.gb_kotlin.data.provider
+package com.example.firstkotlinexample.data.provider
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -36,8 +36,8 @@ class FirestoreDataProvider : RemoteDataProvider {
     override fun getNoteById(id: String): LiveData<NoteResult> {
         val result = MutableLiveData<NoteResult>()
         notesReference.document(id).get()
-            .addOnSuccessListener { snapshot ->
-                result.value = NoteResult.Success(snapshot.toObject(Note::class.java))
+            .addOnSuccessListener {
+                result.value = NoteResult.Success(it.toObject(Note::class.java))
             }.addOnFailureListener {
                 result.value = NoteResult.Error(it)
             }
@@ -47,7 +47,7 @@ class FirestoreDataProvider : RemoteDataProvider {
     override fun saveNote(note: Note): LiveData<NoteResult> {
         val result = MutableLiveData<NoteResult>()
         notesReference.document(note.id).set(note)
-            .addOnSuccessListener { snapshot ->
+            .addOnSuccessListener {
                 result.value = NoteResult.Success(note)
             }.addOnFailureListener {
                 result.value = NoteResult.Error(it)

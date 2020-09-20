@@ -1,8 +1,8 @@
 package com.example.firstkotlinexample.data
 
 import com.example.firstkotlinexample.data.entity.Note
-import ru.geekbrains.gb_kotlin.data.provider.FirestoreDataProvider
-import ru.geekbrains.gb_kotlin.data.provider.RemoteDataProvider
+import com.example.firstkotlinexample.data.provider.FirestoreDataProvider
+import com.example.firstkotlinexample.data.provider.RemoteDataProvider
 
 
 object NotesRepository {

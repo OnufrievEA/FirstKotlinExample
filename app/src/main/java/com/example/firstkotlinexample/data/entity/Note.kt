@@ -21,3 +21,8 @@ enum class Color {
     RED,
     VIOLET;
 }
+
+fun getRandomColor(): Color {
+    val pick = Random().nextInt(Color.values().size)
+    return Color.values()[pick]
+}

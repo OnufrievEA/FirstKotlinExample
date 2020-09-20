@@ -1,4 +1,4 @@
-package ru.geekbrains.gb_kotlin.data.provider
+package com.example.firstkotlinexample.data.provider
 
 import androidx.lifecycle.LiveData
 import com.example.firstkotlinexample.data.entity.Note
