@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.view.MenuItem
-import androidx.core.content.ContextCompat
 import androidx.lifecycle.ViewModelProvider
 import com.example.firstkotlinexample.R
 import com.example.firstkotlinexample.data.entity.Color
@@ -67,9 +66,7 @@ class NoteActivity : BaseActivity<Note?, NoteViewState>() {
         this.note = data
         supportActionBar?.title = note?.let { note ->
             SimpleDateFormat(DATE_FORMAT, Locale.getDefault()).format(note.lastChanged)
-        } ?: let {
-            getString(R.string.new_note_title)
-        }
+        } ?: getString(R.string.new_note_title)
         initView()
     }
 
@@ -90,7 +87,7 @@ class NoteActivity : BaseActivity<Note?, NoteViewState>() {
                 Color.BLUE -> R.color.blue
             }
 
-//            toolbar.setBackgroundColor(ContextCompat.getColor(this, color))
+//            toolbar.setBackgroundColor(getColor(this, color))
         }
 
         et_title.addTextChangedListener(textChangeListener)
